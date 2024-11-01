@@ -52,6 +52,7 @@ String[] datos=new String[4];
             
         } catch (SQLException ex) {
             Logger.getLogger(Formulario.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("Hola mundo!");
         }
     }
 }
