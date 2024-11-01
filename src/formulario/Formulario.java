@@ -4,6 +4,8 @@
  */
 package formulario;
 
+
+
 /**
  *
  * @author Rosmery López
@@ -11,8 +13,12 @@ package formulario;
 import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-public class Formulario {
+import javax.swing.table.DefaultTableModel;
 
+public class Formulario {
+DefaultTableModel modelo;
+String[] titulos=["Nombre","Documento","Correo","Telefono"];
+String[] datos=new String[4];
     /**
      * @param args the command line arguments
      */

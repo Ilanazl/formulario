@@ -4,11 +4,18 @@
  */
 package formulario;
 
-/**
- *
+
+
+        
+        *
  * @author Rosmery López
  */
+
+import com.sun.jdi.connect.spi.Connection;
+
 public class frml extends javax.swing.JFrame {
+
+
 
     /**
      * Creates new form frml
@@ -26,6 +33,7 @@ public class frml extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jButton1 = new javax.swing.JButton();
         lbDocumento = new javax.swing.JLabel();
         txfdoc = new javax.swing.JTextField();
         lbCorreo = new javax.swing.JLabel();
@@ -38,6 +46,14 @@ public class frml extends javax.swing.JFrame {
         btEnviar = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         lbformulario = new javax.swing.JLabel();
+        pnInsertar = new javax.swing.JPanel();
+        btInsertar = new javax.swing.JButton();
+        jfrInsertar = new javax.swing.JInternalFrame();
+        btGuardar = new javax.swing.JButton();
+        btEliminar = new javax.swing.JButton();
+        lbArchivos = new javax.swing.JLabel();
+
+        jButton1.setText("jButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -90,25 +106,92 @@ public class frml extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(201, 201, 201)
+                .addGap(144, 144, 144)
                 .addComponent(lbformulario, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(201, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addComponent(lbformulario)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
+        );
+
+        pnInsertar.setBackground(new java.awt.Color(255, 204, 204));
+
+        btInsertar.setText("Insertar doc");
+        btInsertar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btInsertarActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnInsertarLayout = new javax.swing.GroupLayout(pnInsertar);
+        pnInsertar.setLayout(pnInsertarLayout);
+        pnInsertarLayout.setHorizontalGroup(
+            pnInsertarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnInsertarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btInsertar)
+                .addContainerGap(8, Short.MAX_VALUE))
+        );
+        pnInsertarLayout.setVerticalGroup(
+            pnInsertarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnInsertarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btInsertar)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jfrInsertar.setVisible(true);
+
+        btGuardar.setText("Guardar");
+        btGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btGuardarActionPerformed(evt);
+            }
+        });
+
+        btEliminar.setText("Eliminar");
+        btEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btEliminarActionPerformed(evt);
+            }
+        });
+
+        lbArchivos.setText("Archivos");
+
+        javax.swing.GroupLayout jfrInsertarLayout = new javax.swing.GroupLayout(jfrInsertar.getContentPane());
+        jfrInsertar.getContentPane().setLayout(jfrInsertarLayout);
+        jfrInsertarLayout.setHorizontalGroup(
+            jfrInsertarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jfrInsertarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jfrInsertarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jfrInsertarLayout.createSequentialGroup()
+                        .addComponent(btGuardar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btEliminar))
+                    .addComponent(lbArchivos))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jfrInsertarLayout.setVerticalGroup(
+            jfrInsertarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jfrInsertarLayout.createSequentialGroup()
+                .addComponent(lbArchivos)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 97, Short.MAX_VALUE)
+                .addGroup(jfrInsertarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btGuardar)
+                    .addComponent(btEliminar))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGap(14, 14, 14)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lbCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbDocumento)
@@ -118,17 +201,28 @@ public class frml extends javax.swing.JFrame {
                     .addComponent(lbTelefono)
                     .addComponent(txfcorreo, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(pnInsertar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(jfrInsertar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(147, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(40, 40, 40)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(17, 17, 17)
                 .addComponent(lbNombre)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(txfNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -144,7 +238,11 @@ public class frml extends javax.swing.JFrame {
                 .addComponent(lbTelefono)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(tfTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(55, 55, 55)
+                .addGap(18, 18, 18)
+                .addComponent(pnInsertar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jfrInsertar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -159,6 +257,38 @@ btEnviar.setText("Enviado " + lbNombre.getText());
     private void txfdocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txfdocActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txfdocActionPerformed
+
+    private void btInsertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btInsertarActionPerformed
+conexion mysql=new conexion();
+Connection cn=mysql.conectar();
+String nom,doc,corr,tel="";
+String sSQL="";
+nom=lbNombre.getText();
+doc=lbDocumento.getText();
+corr=lbCorreo.getText();
+tel=lbTelefono.getText();
+sSQL="INSERT INTO Formulario(Nombre,Documento,Correo,Telefono)"
+        +"VALUES(?,?,?,?)";
+try{
+    PrepareStatement pst= cn.prepareStatement (sSQL);
+    pst.setString(1, nom);
+    pst.setString(2, doc);
+    pst.setString(3, corr);
+    pst.setString(4, tel);
+    int n=pst.executeUpdate();
+    JOptionPane.showMessageDialog(null, "El registro se ingreso ", "Enviar", JOptionPane.INFROMATION_MESSAGE);
+    
+    
+}catch(SQLException ex) {
+    }//GEN-LAST:event_btInsertarActionPerformed
+
+    private void btGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btGuardarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btGuardarActionPerformed
+
+    private void btEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEliminarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btEliminarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -196,14 +326,21 @@ btEnviar.setText("Enviado " + lbNombre.getText());
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btEliminar;
     private javax.swing.JButton btEnviar;
+    private javax.swing.JButton btGuardar;
+    private javax.swing.JButton btInsertar;
+    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JInternalFrame jfrInsertar;
+    private javax.swing.JLabel lbArchivos;
     private javax.swing.JLabel lbCorreo;
     private javax.swing.JLabel lbDocumento;
     private javax.swing.JLabel lbNombre;
     private javax.swing.JLabel lbTelefono;
     private javax.swing.JLabel lbformulario;
+    private javax.swing.JPanel pnInsertar;
     private javax.swing.JTextField tfTelefono;
     private javax.swing.JTextField txfNombre;
     private javax.swing.JTextField txfcorreo;
